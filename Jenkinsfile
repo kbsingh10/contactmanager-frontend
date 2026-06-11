@@ -45,7 +45,7 @@ pipeline {
             steps {
                 echo 'Building frontend Docker image...'
                 // Builds and tags the image using your variables
-                sh "docker build --build-arg VITE_API_URL=\$(API_URL) -t ${IMAGE_REPO}/frontend:${IMAGE_TAG} ."
+                sh "docker build --build-arg VITE_API_URL=${API_URL} -t ${IMAGE_REPO}/frontend:${IMAGE_TAG} ."
                 sh "docker push ${IMAGE_REPO}/frontend:${IMAGE_TAG}"
             }
         }
