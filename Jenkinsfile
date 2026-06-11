@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         // Define your Docker Hub repository and image tags
-        IMAGE_REPO = 'prengineering' // Replace with your actual Docker Hub username/org
+        IMAGE_REPO = 'kbsingh10' // Replace with your actual Docker Hub username/org
         IMAGE_TAG  = "0.0.${env.BUILD_NUMBER}"    // Uses the Jenkins build number as the unique tag
     }
 
